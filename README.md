@@ -139,16 +139,4 @@ analyze_20x2_results.ipynb
 
 即可彙整測試結果，並繪製 CTC loss、syllable accuracy 與 exact accuracy 三項指標的 boxplot。
 
-## 評估指標
 
-論文中主要使用以下根據 CTC 解碼後注音音節序列所計算的指標：
-
-- CTC loss
-- syllable accuracy（`1 - SER`）
-- exact accuracy
-
-程式碼中另外包含考慮台灣華語發音等價關係的輔助評估方式。由於該部分亦屬原始分析程式的一部分，因此保留於 repository 中；論文中的主要模型比較則使用上述嚴格定義的評估指標。
-
-## License
-
-目前尚未加入 license。
