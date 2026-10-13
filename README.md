@@ -53,12 +53,9 @@ python/
     └── train_utils.py
 ```
 
-為避免 repository 中包含範例文字內容、本機檔案路徑或實驗產生的結果，所有 notebook 均已移除執行輸出。
-
 ## 環境設定
 
 建立 Python 環境後，安裝所需套件：
-
 ```bash
 pip install -r requirements.txt
 ```
