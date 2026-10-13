@@ -2,13 +2,6 @@
 
 本 repository 收錄中國統計學社投稿論文中，TensorProjection Layer（TPL）應用於台灣華語語音辨識範例所使用的程式碼。
 
-本分析比較兩個在維度縮減後具有相同輸出維度的神經網路模型：
-
-- **Baseline model：** 使用最大池化（max pooling）進行維度縮減。
-- **TPL model：** 使用 TensorProjection Layer 進行維度縮減。
-
-兩個模型後續的 BiGRU 與輸出層採用相同的結構。
-
 ## 資料
 
 本分析使用 Mozilla Common Voice 資料集中的**台灣華語**資料。分析僅使用 `validated.tsv` 中的資料，並在前處理時移除長度超過 5 秒的錄音。論文中的分析經過上述前處理後，共保留 **81,249 筆錄音**。所得到的輸入大小為
