@@ -68,42 +68,7 @@ npy/
 
 ## 執行單次實驗
 
-模型種類與隨機種子可透過環境變數指定。由 `python/` 目錄執行：
-
-```bash
-MODEL=baseline SEED=123 jupyter nbconvert \
-  --execute --to notebook experiment.ipynb \
-  --output /tmp/experiment_baseline_seed123.ipynb
-```
-
-或
-
-```bash
-MODEL=tpl SEED=123 jupyter nbconvert \
-  --execute --to notebook experiment.ipynb \
-  --output /tmp/experiment_tpl_seed123.ipynb
-```
-
-`experiment_config.py` 中主要的模型訓練設定如下：
-
-- 訓練 / 驗證 / 測試資料分割：85% / 5% / 10%
-- 最佳化方法：AdamW
-- 學習率：`1e-3`
-- weight decay：`1e-4`
-- batch size：256
-- 最大 epoch 數：100
-- early stopping patience：5
-- BiGRU hidden size：每個方向 256
-- BiGRU 層數：2
-- dropout：0.2
-
-每次實驗的結果會儲存於
-
-```text
-results/<model>/seed_<seed>/
-```
-
-其中包含該次實驗的設定、訓練過程、測試指標以及最佳模型的參數。
+開啟 `python/experiment_config.py`，設定模型種類（`MODEL`）與隨機種子（`SEED`）。接著使用 Jupyter Lab 開啟 `python/experiment.ipynb`，依序執行所有 cell，即可進行模型訓練與評估。其他訓練設定也可以在 `experiment_config.py` 中調整。實驗結果會儲存於 `results/<model>/seed_<seed>/`。
 
 ## 重現 20 × 2 次比較
 
