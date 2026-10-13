@@ -60,10 +60,6 @@ python/
 pip install -r requirements.txt
 ```
 
-由於原始實驗程式並未保存完整的環境版本資訊，因此此處未固定各套件的版本。
-
-注音轉換步驟使用 `g2pW`。若將其模型檔下載至 `python/G2PWModel/`，該目錄已設定為不納入 Git。
-
 ## 重現資料前處理
 
 請由 `python/` 目錄依序執行以下 notebook：
@@ -82,15 +78,6 @@ npy/
 ├── meta.csv
 └── vocab.json
 ```
-
-主要前處理設定如下：
-
-- 取樣頻率：16 kHz
-- 錄音最長時間：5 秒
-- FFT size：400
-- hop length：128
-- Mel 頻率區間數：64
-- 最大時間長度：626 frames
 
 ## 執行單次實驗
 
