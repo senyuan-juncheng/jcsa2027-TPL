@@ -1,0 +1,10 @@
+/data/*
+!/data/README.md
+/npy/
+/results/
+/python/G2PWModel/
+/python/test_metrics_boxplots.png
+
+**/__pycache__/
+**/.ipynb_checkpoints/
+*.py[cod]
