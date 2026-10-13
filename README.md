@@ -4,25 +4,19 @@
 
 ## 資料
 
-本分析使用 Mozilla Common Voice 資料集中的**台灣華語**資料。分析僅使用 `validated.tsv` 中的資料，並在前處理時移除長度超過 5 秒的錄音。論文中的分析經過上述前處理後，共保留 **81,249 筆錄音**。所得到的輸入大小為
-
-```text
-(81249, 1, 64, 626)
-```
-
-本 repository 不包含原始 Common Voice 資料。
-
-請將資料放置於以下位置：
+請下載 Mozilla Common Voice 的台灣華語資料，並依照以下結構放置檔案：
 
 ```text
 jcsa2027-TPL/
 ├── data/
 │   ├── validated.tsv
 │   └── clips/
-├── npy/                  # 由前處理產生，不納入 Git
-├── results/              # 由實驗產生，不納入 Git
+├── npy/                  # 前處理後自動產生
+├── results/              # 執行實驗後自動產生
 └── python/
 ```
+
+原始資料不包含在本 repository 中。`npy/` 與 `results/` 無須事先建立。
 
 ## Repository 結構
 
