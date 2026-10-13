@@ -1,0 +1,9 @@
+numpy
+pandas
+torch
+librosa
+matplotlib
+tqdm
+g2pW
+jupyter
+nbconvert
